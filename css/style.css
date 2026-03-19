@@ -88,16 +88,33 @@ img {
 
 .logo-banner__link {
   pointer-events: auto;
+  position: relative;
+}
+
+.logo-banner::before {
+  content: '';
+  position: absolute;
+  top: 15%;
+  left: 0;
+  right: 0;
+  height: 70%;
+  background: var(--dark);
+  z-index: -1;
 }
 
 .logo-banner__link img {
   height: 311px;
   width: auto;
   transition: var(--transition);
+  filter: drop-shadow(0 2px 8px rgba(219, 158, 54, 0.5)) drop-shadow(0 0 20px rgba(219, 158, 54, 0.2));
 }
 
 .logo-banner--scrolled {
   opacity: 0;
+  pointer-events: none !important;
+}
+
+.logo-banner--scrolled .logo-banner__link {
   pointer-events: none;
 }
 
@@ -542,6 +559,61 @@ img {
   width: 60px;
 }
 
+/* ===== Degustation ===== */
+.degustation__subtitle {
+  font-size: 1.05rem;
+  color: var(--gray);
+  max-width: 600px;
+  margin: 16px auto 0;
+  line-height: 1.6;
+}
+
+.degustation__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.degustation__item {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.degustation__item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.degustation__item:hover img {
+  transform: scale(1.05);
+}
+
+.degustation__item--wide {
+  grid-column: 1 / -1;
+}
+
+.degustation__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 24px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+}
+
+.degustation__tag {
+  display: inline-block;
+  padding: 6px 16px;
+  background: var(--gold);
+  color: var(--white-pure);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 100px;
+}
+
 /* ===== Quality ===== */
 .quality__grid {
   display: grid;
@@ -822,6 +894,7 @@ a.contacts__value:hover {
   height: 264px;
   width: auto;
   margin-bottom: 16px;
+  filter: drop-shadow(0 2px 8px rgba(219, 158, 54, 0.5)) drop-shadow(0 0 20px rgba(219, 158, 54, 0.3));
 }
 
 .footer__brand p {
@@ -1173,8 +1246,13 @@ a.contacts__value:hover {
   .quality__grid,
   .advantages__grid,
   .recommendations__grid,
-  .testimonials__grid {
+  .testimonials__grid,
+  .degustation__grid {
     grid-template-columns: 1fr;
+  }
+
+  .degustation__item--wide {
+    grid-column: auto;
   }
 
   .experience__grid {

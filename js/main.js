@@ -11,9 +11,17 @@ updateLogoPosition();
 window.addEventListener('resize', updateLogoPosition);
 
 window.addEventListener('scroll', () => {
-  const scrolled = window.scrollY > 150;
+  const scrollY = window.scrollY;
+  const scrolled = scrollY > 50;
   header.classList.toggle('header--scrolled', scrolled);
-  logoBanner.classList.toggle('logo-banner--scrolled', scrolled);
+
+  // Плавне зникання лого від 0 до 100px скролу
+  const fadeStart = 0;
+  const fadeEnd = 100;
+  const opacity = Math.max(0, 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart));
+  logoBanner.style.opacity = opacity;
+  logoBanner.classList.toggle('logo-banner--scrolled', opacity === 0);
+
   updateLogoPosition();
 });
 
