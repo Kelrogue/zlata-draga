@@ -46,55 +46,170 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Header -->
   <header class="header" id="header">
     <div class="container header__inner">
-      <nav class="header__nav header__nav--left" id="nav-left">
+      <nav class="header__nav" id="nav">
         <a href="#about" class="header__link">Про нас</a>
-        <a href="#services" class="header__link">Послуги</a>
-        <a href="#quality" class="header__link">Контроль якості</a>
-        <a href="#advantages" class="header__link header__link--mobile">Переваги</a>
-        <a href="#contacts" class="header__link header__link--mobile">Контакти</a>
-      </nav>
-      <nav class="header__nav header__nav--right" id="nav">
-        <a href="#advantages" class="header__link">Переваги</a>
+        <a href="#advantages" class="header__link">Наші переваги</a>
+        <a href="#quality" class="header__link">Якість</a>
         <a href="#contacts" class="header__link">Контакти</a>
-        <a href="#contacts" class="btn btn--primary btn--sm header__cta">Отримати пропозицію</a>
       </nav>
+      <a href="#contacts" class="btn btn--primary btn--sm header__cta">Отримати пропозицію</a>
       <button class="header__burger" id="burger" aria-label="Меню">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- Logo Banner -->
-  <div class="logo-banner" id="logoBanner">
-    <a href="#" class="logo-banner__link">
-      <img src="img/logo.svg" alt="Synergy Force">
-    </a>
-  </div>
-
   <!-- Hero -->
   <section class="hero" id="hero">
-    <div class="hero__bg"></div>
+    <div class="hero__bg">
+      <img src="img/photo_3.jpg" alt="Мерчандайзинг">
+    </div>
+    <div class="hero__overlay"></div>
     <div class="container hero__inner">
       <div class="hero__content">
-        <p class="hero__label">Маркетингова агенція</p>
-        <h1 class="hero__title">Сучасні рішення для <span class="accent">просування</span> вашого бренду</h1>
+        <img src="img/logo.svg" alt="Zlata Draga" class="hero__logo">
         <p class="hero__text">Понад 15 років досвіду в мерчандайзингу, BTL-активностях та аутсорсингу персоналу по всій Україні</p>
         <div class="hero__actions">
-          <a href="#contacts" class="btn btn--primary">Зв'язатися з нами</a>
-          <a href="#services" class="btn btn--outline">Наші послуги</a>
+          <a href="#contacts" class="btn btn--white">Зв'язатися з нами</a>
         </div>
       </div>
-      <div class="hero__image">
-        <img src="img/photo_1.jpg" alt="Synergy Force">
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__number" data-target="15">0</span><span class="stat__plus">+</span>
+          <span class="stat__label">Років досвіду</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number" data-target="500">0</span><span class="stat__plus">+</span>
+          <span class="stat__label">Торгових точок</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number" data-target="50">0</span><span class="stat__plus">+</span>
+          <span class="stat__label">Клієнтів</span>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- Nav Buttons -->
+  <div class="hero__nav-buttons container">
+    <button class="hero__nav-btn" data-page="services">Послуги</button>
+    <button class="hero__nav-btn" data-page="promo">Промоакції</button>
+    <a href="#testimonials" class="hero__nav-btn">Відгуки</a>
+  </div>
+
+  <!-- Fullscreen Page: Послуги -->
+  <div class="fullpage" id="page-services">
+    <div class="fullpage__inner">
+      <div class="section__header">
+        <p class="section__label">Що ми пропонуємо</p>
+        <h2 class="section__title">Наші послуги</h2>
+      </div>
+      <div class="services-tiles">
+        <div class="service-tile" data-service="0">
+          <div class="service-tile__icon"><i class="fas fa-crown"></i></div>
+          <h3 class="service-tile__title">Ексклюзивний мерчандайзинг</h3>
+        </div>
+        <div class="service-tile" data-service="1">
+          <div class="service-tile__icon"><i class="fas fa-crosshairs"></i></div>
+          <h3 class="service-tile__title">Фокусний мерчандайзинг</h3>
+        </div>
+        <div class="service-tile" data-service="2">
+          <div class="service-tile__icon"><i class="fas fa-store"></i></div>
+          <h3 class="service-tile__title">"Мережевий" мерчандайзинг</h3>
+        </div>
+        <div class="service-tile" data-service="3">
+          <div class="service-tile__icon"><i class="fas fa-users"></i></div>
+          <h3 class="service-tile__title">Аутстафінг персоналу</h3>
+        </div>
+        <div class="service-tile" data-service="4">
+          <div class="service-tile__icon"><i class="fas fa-bullhorn"></i></div>
+          <h3 class="service-tile__title">BTL</h3>
+        </div>
+        <div class="service-tile" data-service="5">
+          <div class="service-tile__icon"><i class="fas fa-clipboard-list"></i></div>
+          <h3 class="service-tile__title">Стандартний пакет послуг</h3>
+        </div>
+        <div class="service-tile" data-service="6">
+          <div class="service-tile__icon"><i class="fas fa-rocket"></i></div>
+          <h3 class="service-tile__title">Стимулювання продажів</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fullscreen Page: Деталі послуги -->
+  <div class="fullpage" id="page-service-detail">
+    <div class="fullpage__inner">
+      <div class="service-detail">
+        <div class="service-detail__content">
+          <div class="service-detail__icon"></div>
+          <h2 class="service-detail__title"></h2>
+          <div class="service-detail__text"></div>
+        </div>
+        <div class="service-detail__img-wrap">
+          <img class="service-detail__img" src="" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fullscreen Page: Промоакції -->
+  <div class="fullpage" id="page-promo">
+    <div class="fullpage__inner">
+      <div class="section__header">
+        <p class="section__label">BTL-активності</p>
+        <h2 class="section__title">Дегустації та промо</h2>
+      </div>
+      <p class="promo__intro">Ми організовуємо дегустації, промо-акції та BTL-заходи для провідних брендів по всій Україні. Кожен проєкт — це індивідуальний підхід, професійна команда та вимірюваний результат.</p>
+
+      <div class="promo__cases">
+        <div class="promo__case">
+          <div class="promo__case-img">
+            <img src="img/photo_dig_1.jpg" alt="Дегустація Galicia">
+          </div>
+          <div class="promo__case-info">
+            <span class="promo__case-tag">Дегустація</span>
+            <h3>Galicia — дегустація соків у торгових мережах</h3>
+            <p>Організація дегустаційних стендів у ключових торгових точках. Промо-консультанти презентували лінійку натуральних соків Galicia, розповідали про склад та переваги продукту. Результат — збільшення продажів у точках проведення на 35% протягом акційного періоду.</p>
+          </div>
+        </div>
+
+        <div class="promo__case promo__case--reverse">
+          <div class="promo__case-img">
+            <img src="img/photo_dig_3.jpg" alt="Дегустація Highberry">
+          </div>
+          <div class="promo__case-info">
+            <span class="promo__case-tag">Промо-акція</span>
+            <h3>Highberry — запуск нового продукту на ринку</h3>
+            <p>Комплексна промо-кампанія з дегустаціями у супермаркетах та гіпермаркетах. Наша команда забезпечила повний цикл: від підбору та навчання персоналу до логістики матеріалів і щоденної звітності. Охоплення — понад 120 торгових точок у 8 містах України.</p>
+          </div>
+        </div>
+
+        <div class="promo__case">
+          <div class="promo__case-img">
+            <img src="img/photo_dig_2.jpg" alt="Промо-консультант">
+          </div>
+          <div class="promo__case-info">
+            <span class="promo__case-tag">Консультування</span>
+            <h3>Промо-консультанти у торгових залах</h3>
+            <p>Надання кваліфікованих промо-консультантів для роботи безпосередньо в торговому залі. Консультанти допомагають покупцям з вибором, інформують про акції та новинки, збільшуючи конверсію та середній чек. Постійна присутність у точках продажу з повним контролем якості.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="promo__cta">
+        <h3>Хочете організувати промо-акцію для вашого бренду?</h3>
+        <p>Ми розробимо індивідуальну стратегію та забезпечимо професійне виконання</p>
+        <a href="#contacts" class="btn btn--primary btn--lg promo__cta-btn">Обговорити проєкт</a>
+      </div>
+    </div>
+  </div>
 
   <!-- About -->
   <section class="about section" id="about">
@@ -136,20 +251,20 @@
     </div>
   </section>
 
-  <!-- Experience -->
-  <section class="experience section section--alt" id="experience">
+  <!-- Experience / Partners -->
+  <section class="experience section" id="experience">
     <div class="container">
       <div class="section__header">
         <p class="section__label">Партнери</p>
-        <h2 class="section__title">Наш досвід</h2>
+        <h2 class="section__title">Нам довіряють</h2>
       </div>
       <div class="experience__grid">
         <div class="experience__item"><img src="img/brands/Galfim-e1611047907169.jpg" alt="Galfim"></div>
-        <div class="experience__item"><img src="img/brands/logo.png" alt="IP Land"></div>
+        <div class="experience__item experience__item--xl"><img src="img/brands/logo.png" alt="IP Land"></div>
         <div class="experience__item"><img src="img/brands/EDR_LOGO.png" alt="Eurodrink's"></div>
-        <div class="experience__item experience__item--large"><img src="img/brands/brown-forman-logo-png_seeklogo-322211.png" alt="Brown-Forman"></div>
+        <div class="experience__item experience__item--xl"><img src="img/brands/brown-forman-logo-png_seeklogo-322211.png" alt="Brown-Forman"></div>
         <div class="experience__item"><img src="img/brands/images 2.png" alt="Діа"></div>
-        <div class="experience__item experience__item--medium"><img src="img/brands/cocacola-11.svg" alt="Coca-Cola"></div>
+        <div class="experience__item experience__item--xl"><img src="img/brands/cocacola-11.svg" alt="Coca-Cola"></div>
         <div class="experience__item experience__item--medium"><img src="img/brands/images.png" alt="Beehive"></div>
         <div class="experience__item experience__item--medium"><img src="img/brands/schedro-22776.jpg" alt="Щедро"></div>
         <div class="experience__item experience__item--medium"><img src="img/brands/jbl-svgrepo-com.svg" alt="JBL"></div>
@@ -160,99 +275,33 @@
     </div>
   </section>
 
-  <!-- Photo banner -->
-  <section class="photo-banner">
-    <div class="container">
-      <img src="img/photo_3.jpg" alt="Мерчандайзинг у роздрібній мережі">
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section class="services section section--alt" id="services">
+  <!-- Advantages -->
+  <section class="advantages section section--dark" id="advantages">
     <div class="container">
       <div class="section__header">
-        <p class="section__label">Що ми пропонуємо</p>
-        <h2 class="section__title">Наші послуги</h2>
+        <p class="section__label section__label--light">Чому обирають нас</p>
+        <h2 class="section__title section__title--light">Наші переваги</h2>
       </div>
-      <div class="services__grid">
-        <div class="service-card">
-          <div class="service-card__icon"><i class="fas fa-crown"></i></div>
-          <h3 class="service-card__title">Ексклюзивний мерчандайзинг</h3>
-          <p class="service-card__text">Рекомендуємо компаніям з широким асортиментом торгових марок використовувати виділену команду, для цілковитого зосередження на завданнях однієї компанії й досягнення максимальних результатів.</p>
-          <div class="service-card__line"></div>
+      <div class="advantages__grid">
+        <div class="advantage">
+          <div class="advantage__icon"><i class="fas fa-star"></i></div>
+          <h3>Висока якість сервісу</h3>
+          <p>Суворі стандарти виконання на кожному етапі роботи з постійним моніторингом результатів</p>
         </div>
-        <div class="service-card">
-          <div class="service-card__icon"><i class="fas fa-crosshairs"></i></div>
-          <h3 class="service-card__title">Фокусний мерчандайзинг</h3>
-          <p class="service-card__text">Рекомендуємо компаніям, які зацікавлені в мінімізації витрат на функцію мерчандайзингу. За даною схемою мерчандайзер працює в одній точці з декількома "портфелями", виділяючи на кожен узгоджену кількість часу.</p>
-          <div class="service-card__line"></div>
+        <div class="advantage">
+          <div class="advantage__icon"><i class="fas fa-hand-holding-usd"></i></div>
+          <h3>Гнучка цінова політика</h3>
+          <p>Індивідуальний підхід до формування вартості послуг залежно від обсягу та специфіки проєкту</p>
         </div>
-        <div class="service-card">
-          <div class="service-card__icon"><i class="fas fa-store"></i></div>
-          <h3 class="service-card__title">"Мережевий" мерчандайзинг</h3>
-          <p class="service-card__text">Цей сервіс розроблений спеціально для гіпермаркетів та великих мереж, де є потреба в ефективній та оперативній роботі з великими обсягами товарів. В даному випадку мерчандайзинг здійснюється в нічну зміну і спрямований на максимальне заповнення полиць до відкриття торгового залу для відвідувачів.</p>
-          <div class="service-card__line"></div>
+        <div class="advantage">
+          <div class="advantage__icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Розвиток персоналу</h3>
+          <p>Постійне навчання, тренінги та програми мотивації для підтримки високого професійного рівня</p>
         </div>
-        <div class="service-card">
-          <div class="service-card__icon"><i class="fas fa-users"></i></div>
-          <h3 class="service-card__title">Аутстафінг персоналу</h3>
-          <p class="service-card__text">Це тип моделі віддаленого найму, при якій компанія-підрядник надає фахівця або групу професіоналів для участі в проєкті клієнта на період дії контракту. При цьому клієнт повністю контролює і керує "орендованою" командою або фахівцем, а компанія-підрядник займається підбором, юридичними аспектами співпраці, оплачує зарплату і проводить HR-процеси.</p>
-          <div class="service-card__line"></div>
-        </div>
-        <div class="service-card">
-          <div class="service-card__icon"><i class="fas fa-bullhorn"></i></div>
-          <h3 class="service-card__title">BTL</h3>
-          <p class="service-card__text">Заходи, Таємний покупець, Outlet Sensus, Проведення аудитів, Моніторинг цін, Промо-консультант, Продавець-консультант та інші види послуг, які спрямовані на збільшення продажів.</p>
-          <div class="service-card__line"></div>
-        </div>
-        <div class="service-card">
-          <div class="service-card__icon"><i class="fas fa-clipboard-list"></i></div>
-          <h3 class="service-card__title">Стандартний пакет послуг компанії</h3>
-          <p class="service-card__text">Викладання продукції на торговому устаткуванні відповідно до стандартів мерчандайзингу та планограми мережі, Поповнення товарного запасу на полиці та у додаткових місцях продажу, Контроль за ротацією товару (FIFO), Контроль ціни на продукцію (оновлення цінників), Розміщення та заміна рекламних матеріалів, Підтримання чистоти торговельного обладнання, Зняття залишків продукції, Дозамовлення продукції.</p>
-          <div class="service-card__line"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta section">
-    <div class="container cta__inner">
-      <h2 class="cta__title">Готові збільшити продажі вашого бренду?</h2>
-      <p class="cta__text">Отримайте безкоштовну консультацію та індивідуальну комерційну пропозицію протягом 24 годин</p>
-      <div class="cta__actions">
-        <a href="#contacts" class="btn btn--primary btn--lg">Отримати пропозицію</a>
-        <a href="tel:+380503843737" class="btn btn--outline btn--lg">+380 (50) 384-37-37</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Degustation -->
-  <section class="degustation section" id="degustation">
-    <div class="container">
-      <div class="section__header">
-        <p class="section__label">BTL-активності</p>
-        <h2 class="section__title">Дегустації</h2>
-        <p class="degustation__subtitle">Організовуємо промо-дегустації у торгових мережах по всій Україні — від підбору персоналу до повного звіту з результатами</p>
-      </div>
-      <div class="degustation__grid">
-        <div class="degustation__item">
-          <img src="img/photo_dig_1.jpg" alt="Дегустація продукції Galicia у супермаркеті">
-          <div class="degustation__overlay">
-            <span class="degustation__tag">Galicia</span>
-          </div>
-        </div>
-        <div class="degustation__item">
-          <img src="img/photo_dig_3.jpg" alt="Дегустація продукції Highberry у супермаркеті">
-          <div class="degustation__overlay">
-            <span class="degustation__tag">Highberry</span>
-          </div>
-        </div>
-        <div class="degustation__item degustation__item--wide">
-          <img src="img/photo_dig_2.jpg" alt="Промо-консультант Galicia у торговому залі">
-          <div class="degustation__overlay">
-            <span class="degustation__tag">Промо</span>
-          </div>
+        <div class="advantage">
+          <div class="advantage__icon"><i class="fas fa-map-marked-alt"></i></div>
+          <h3>Національне покриття</h3>
+          <p>Операційна присутність по всій Україні для забезпечення єдиних стандартів обслуговування</p>
         </div>
       </div>
     </div>
@@ -306,76 +355,70 @@
     </div>
   </section>
 
-  <!-- Advantages -->
-  <section class="advantages section section--alt" id="advantages">
-    <div class="container">
-      <div class="section__header">
-        <p class="section__label">Чому обирають нас</p>
-        <h2 class="section__title">Конкурентні переваги</h2>
-      </div>
-      <div class="advantages__grid">
-        <div class="advantage">
-          <div class="advantage__icon">★</div>
-          <h3>Висока якість сервісу</h3>
-          <p>Суворі стандарти виконання на кожному етапі роботи з постійним моніторингом результатів</p>
-        </div>
-        <div class="advantage">
-          <div class="advantage__icon">◎</div>
-          <h3>Гнучка цінова політика</h3>
-          <p>Індивідуальний підхід до формування вартості послуг залежно від обсягу та специфіки проєкту</p>
-        </div>
-        <div class="advantage">
-          <div class="advantage__icon">↗</div>
-          <h3>Розвиток персоналу</h3>
-          <p>Постійне навчання, тренінги та програми мотивації для підтримки високого професійного рівня</p>
-        </div>
-        <div class="advantage">
-          <div class="advantage__icon">◈</div>
-          <h3>Національне покриття</h3>
-          <p>Операційна присутність по всій Україні для забезпечення єдиних стандартів обслуговування</p>
-        </div>
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container cta__inner">
+      <h2 class="cta__title">Готові збільшити продажі вашого бренду?</h2>
+      <p class="cta__text">Отримайте безкоштовну консультацію та індивідуальну комерційну пропозицію протягом 24 годин</p>
+      <div class="cta__actions">
+        <a href="#contacts" class="btn btn--white btn--lg">Отримати пропозицію</a>
+        <a href="tel:+380503843737" class="btn btn--ghost btn--lg">+380 (50) 384-37-37</a>
       </div>
     </div>
   </section>
 
   <!-- Testimonials -->
-  <section class="testimonials section section--alt" id="testimonials">
+  <section class="testimonials section" id="testimonials">
     <div class="container">
       <div class="section__header">
         <p class="section__label">Що кажуть клієнти</p>
         <h2 class="section__title">Відгуки</h2>
       </div>
-      <div class="testimonials__grid">
-        <div class="testimonial-card">
-          <div class="testimonial-card__stars">★★★★★</div>
-          <p class="testimonial-card__text">«Завдяки команді Zlata Draga ми збільшили представленість нашої продукції в мережах на 40%. Професійний підхід та оперативність вражають.»</p>
-          <div class="testimonial-card__author">
-            <strong>Олександр Петренко</strong>
-            <span>Комерційний директор, Galfim</span>
+      <div class="carousel3d">
+        <div class="carousel3d__viewport">
+          <div class="carousel3d__track">
+            <div class="carousel3d__slide">
+              <div class="testimonial-card">
+                <div class="testimonial-card__quote"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-card__text">Завдяки команді Zlata Draga ми збільшили представленість нашої продукції в мережах на 40%. Професійний підхід та оперативність вражають.</p>
+                <div class="testimonial-card__author">
+                  <strong>Олександр Петренко</strong>
+                  <span>Комерційний директор, Galfim</span>
+                </div>
+              </div>
+            </div>
+            <div class="carousel3d__slide">
+              <div class="testimonial-card">
+                <div class="testimonial-card__quote"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-card__text">Співпрацюємо вже понад 3 роки. Якість мерчандайзингу на найвищому рівні — полиці завжди в ідеальному стані, звітність прозора та своєчасна.</p>
+                <div class="testimonial-card__author">
+                  <strong>Ірина Коваленко</strong>
+                  <span>Бренд-менеджер, Brown-Forman</span>
+                </div>
+              </div>
+            </div>
+            <div class="carousel3d__slide">
+              <div class="testimonial-card">
+                <div class="testimonial-card__quote"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-card__text">Команда швидко адаптується до наших вимог і завжди пропонує ефективні рішення. Рекомендую як надійного партнера у сфері мерчандайзингу.</p>
+                <div class="testimonial-card__author">
+                  <strong>Дмитро Савченко</strong>
+                  <span>Регіональний менеджер, Coca-Cola</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="testimonial-card">
-          <div class="testimonial-card__stars">★★★★★</div>
-          <p class="testimonial-card__text">«Співпрацюємо вже понад 3 роки. Якість мерчандайзингу на найвищому рівні — полиці завжди в ідеальному стані, звітність прозора та своєчасна.»</p>
-          <div class="testimonial-card__author">
-            <strong>Ірина Коваленко</strong>
-            <span>Бренд-менеджер, Brown-Forman</span>
-          </div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-card__stars">★★★★★</div>
-          <p class="testimonial-card__text">«Команда швидко адаптується до наших вимог і завжди пропонує ефективні рішення. Рекомендую як надійного партнера у сфері мерчандайзингу.»</p>
-          <div class="testimonial-card__author">
-            <strong>Дмитро Савченко</strong>
-            <span>Регіональний менеджер, Coca-Cola</span>
-          </div>
+        <div class="carousel3d__controls">
+          <button class="carousel3d__btn carousel3d__btn--prev" aria-label="Попередній"><i class="fas fa-chevron-left"></i></button>
+          <button class="carousel3d__btn carousel3d__btn--next" aria-label="Наступний"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contacts -->
-  <section class="contacts section section--alt" id="contacts">
+  <section class="contacts section" id="contacts">
     <div class="container">
       <div class="section__header">
         <p class="section__label">Маєте питання?</p>
@@ -415,7 +458,7 @@
         <div class="contacts__info">
           <div class="contacts__card">
             <div class="contacts__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              <i class="fas fa-phone-alt"></i>
             </div>
             <div>
               <p class="contacts__label">Телефон</p>
@@ -424,11 +467,20 @@
           </div>
           <div class="contacts__card">
             <div class="contacts__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <i class="fas fa-envelope"></i>
             </div>
             <div>
               <p class="contacts__label">Email</p>
               <a href="mailto:Zlata.Draga.ua@gmail.com" class="contacts__value">Zlata.Draga.ua@gmail.com</a>
+            </div>
+          </div>
+          <div class="contacts__card">
+            <div class="contacts__icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div>
+              <p class="contacts__label">Локація</p>
+              <span class="contacts__value">Україна, всі регіони</span>
             </div>
           </div>
         </div>
@@ -440,21 +492,14 @@
   <footer class="footer">
     <div class="container footer__inner">
       <div class="footer__brand">
-        <img src="img/logo.svg" alt="Synergy Force" class="footer__logo">
+        <img src="img/logo.svg" alt="Zlata Draga" class="footer__logo">
       </div>
       <div class="footer__links">
         <h4>Навігація</h4>
         <a href="#about">Про нас</a>
-        <a href="#services">Послуги</a>
-        <a href="#quality">Контроль якості</a>
-        <a href="#advantages">Переваги</a>
+        <a href="#advantages">Наші переваги</a>
+        <a href="#quality">Якість</a>
         <a href="#contacts">Контакти</a>
-      </div>
-      <div class="footer__links">
-        <h4>Послуги</h4>
-        <a href="#services">Мерчандайзинг</a>
-        <a href="#services">Аутсорсинг</a>
-        <a href="#services">BTL-активності</a>
       </div>
       <div class="footer__links">
         <h4>Документи</h4>
